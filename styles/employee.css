@@ -1,0 +1,110 @@
+/* Resetting some default styles */
+body, h1, h2, h3, p, ul, li {
+    margin: 0;
+    padding: 0;
+}
+
+/* Applying basic styles to the header */
+#page-header {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+#page-header h1 {
+    margin: 0;
+}
+
+#filter-container {
+    display: flex;
+    gap: 10px;
+}
+
+label, select {
+    margin-right: 10px;
+}
+
+/* Styling the select dropdowns */
+select {
+    padding: 5px;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+    background-color: #fff;
+    color: #333;
+}
+
+/* Styling the pagination container */
+#pagination-container {
+    color: #fff;
+}
+
+/* Pagination link styles */
+#pagination-container a {
+    color: #fff;
+    text-decoration: none;
+    padding: 5px 10px;
+    margin: 0 3px;
+    border-radius: 3px;
+    transition: background-color 0.3s;
+}
+
+/* Hover effect for pagination links */
+#pagination-container a:hover {
+    background-color: #f44336;
+}
+
+/* Styling the logout button */
+#logout-button {
+    background-color: #f44336;
+    color: #fff;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+/* Hover effect for the logout button */
+#logout-button:hover {
+    background-color: #d32f2f;
+}
+
+
+
+/* ///////////employe  card */
+
+/* Container for employee cards with CSS Grid */
+.employee-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(calc(33.33% - 20px), 1fr)); /* 3 items per row */
+    gap: 20px;
+    justify-content: center;
+}
+
+/* Styles for employee cards */
+.employee-card {
+    box-sizing: border-box;
+    border: 1px solid #ddd; /* Border color and style */
+    padding: 10px; /* Adjust padding as needed */
+    text-align: center; /* Center content */
+}
+
+/* Styles for medium screens (2 items per row) */
+@media (max-width: 768px) {
+    .employee-container {
+        grid-template-columns: repeat(auto-fill, minmax(calc(50% - 20px), 1fr)); /* 2 items per row */
+    }
+}
+
+/* Styles for small screens (1 item per row) */
+@media (max-width: 480px) {
+    .employee-container {
+        grid-template-columns: repeat(auto-fill, minmax(100%, 1fr)); /* 1 item per row */
+    }
+}
+
